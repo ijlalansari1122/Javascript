@@ -1,9 +1,10 @@
-const button =document.querySelector('button');
-button.addEventListener('click', onclick);
-function onclick() {
-    console.log(event)
-    console.log(event.type)
-    console.log(event.target)
+const promise=  new Promise((resolve, reject) => { 
+    
+    setTimeout(() => reject(new Error('something is wrong')),1000)
 
-    console.log('You clicked the button')
-}
+
+ });
+console.log(promise)
+promise.then(console.log ).catch( error=> console.log(`oh no ${error}`) );
+
+
